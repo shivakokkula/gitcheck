@@ -13,7 +13,7 @@ jobs:
 
     strategy: 
       matrix:
-        node-version: [16.x]
+        node-version: [20.x]
 
     steps:
       - name: Checkout 
@@ -23,7 +23,6 @@ jobs:
 
       - name: Use Node.JS ${{ matrix.node-version }}
         uses: actions/setup-node@v3 # was "v2" before
-
 
       - name: NPM install, build and test
         run: |
